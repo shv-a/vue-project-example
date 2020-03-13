@@ -1,0 +1,170 @@
+.btn
+  display: inline-block
+  position: relative
+  height: $header-height
+  line-height: 2.4
+  white-space: nowrap
+  padding: 0 5.7rem
+  border: .2rem solid $color-white
+  border-radius: 3.5rem
+  font-size: 1.8rem
+  font-weight: 400
+  color: $color-white
+  background: transparent
+  cursor: pointer
+  transition: .5s ease
+  box-shadow: none
+
+  &:hover
+    background: $color-white
+    color: #02b650
+    box-shadow: 0 3rem 4.8rem -.7rem rgba(0,0,0,0.20)
+
+  &[disabled]
+    background: linear-gradient(135deg, #c4d0c9 0%, #c1d1ce 100%)
+    cursor: default
+    &:hover
+      background: linear-gradient(135deg, #c4d0c9 0%, #c1d1ce 100%)
+      box-shadow: none
+
+  &_alt
+    background: $color-white
+    color: $color-btn-text-blue
+
+    &:hover
+      color: $color-btn-text-green
+
+  &_success
+    white-space: nowrap
+    border: none
+    padding: 1.2rem 5.7rem
+    height: 4.8rem
+
+    &:hover
+      background: transparent
+      color: $color-white
+
+    &:before, &:after
+      display: block
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      bottom: 0
+      right: 0
+      border-radius: inherit
+
+    &:before
+      transition: opacity 1s ease
+      opacity: 1
+      background-image: linear-gradient(-45deg, #17A900 0%, #00CF08 100%)
+      z-index: -2
+    &:after
+      transition: opacity .5s ease
+      background-image: linear-gradient(-45deg, #61D000 0%, #CACA0D 100%)
+      opacity: 0
+      z-index: -1
+
+    &:hover
+      &:after
+        opacity: 1
+    &[disabled]
+      opacity: .5
+      &:hover
+        &:after
+          opacity: 0
+
+  &_primary
+    background: linear-gradient(135deg, #00c455 0%, #03c298 100%)
+    border: .2rem solid transparent
+    &:hover
+      background: linear-gradient(135deg, #00c455 0%, #03c298 100%)
+      color: $color-white
+
+    & > span
+      position: relative
+      z-index: 760
+
+  &_operational
+    color: #5b8cb4
+    border-radius: 4rem
+    border: 2px solid #75a1c5
+    cursor: pointer
+    &:hover
+      color: #5b8cb4
+      background: transparent
+
+  &_danger
+    background: linear-gradient(135deg, #d8203b 0%, #ef2929 100%)
+    color: #fff
+    border-radius: 4rem
+    border: none
+    cursor: pointer
+    &:hover
+      color: #fff
+      background: linear-gradient(135deg, #d8203b 0%, #ef2929 100%)
+
+  &_pale
+    background-color: #d7dae0
+    color: #2f3b51
+    border: none
+    &:hover
+      border: none
+      background: #d7dae0
+      color: #2f3b51
+      box-shadow: 0 .8rem 1.2rem -.2rem rgba(0,0,0,0.20)
+
+  &_action,
+  &_action:hover
+    border: none
+    background-image: linear-gradient(135deg, #02c1f0 0%, #018edc 100%)
+    color: $color-white
+
+  &_up
+    text-transform: uppercase
+
+  &_slg
+    padding: 2rem 5.7rem
+    font-size: 1.8rem
+    line-height: 2.3rem
+    width: 32.4rem
+    height: 6.2rem
+
+  &_sm
+    padding: 0 1.6rem
+    font-size: 1.2rem
+    height: 3.2rem
+    line-height: 2.4
+    border-radius: 1.6rem
+
+  &__text
+    position: relative
+    width: 100%
+    height: 100%
+    line-height: 100%
+
+    &_hover
+      position: absolute
+  &_invert
+    background: white
+    border-radius: 35px
+    border: 2px solid #00c455
+    color: #02b650
+    line-height: 2.5
+
+  &_negative
+    background: transparent
+    border: 2px solid #153671
+    color: #4bb6ff
+  &_negative:hover
+    background: transparent
+    border: 2px solid #4bb6ff
+    color: #4bb6ff
+
++r($small)
+  .btn
+    &_pale
+      font-size: 12px
+      padding: 9px 16px
+      height: unset
+      border-radius: 16px

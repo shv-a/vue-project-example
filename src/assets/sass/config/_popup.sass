@@ -1,0 +1,196 @@
+.s_popup
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  z-index: 999
+  width: 100%
+  height: 100%
+  background-color: rgba(35, 40, 42, 0.4)
+  overflow-y: auto
+  &_wrap
+    display: flex
+    align-items: center
+    padding: 50px
+    height: 100%
+    justify-content: center
+  &_layer
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    width: 100%
+    height: 100%
+    z-index: 1
+  &_close
+    width: 1.8rem
+    height: 1.8rem
+    position: absolute
+    top: 4.4rem
+    right: 4.4rem
+    cursor: pointer
+    &::before,
+    &::after
+      content: ""
+      position: absolute
+      width: 100%
+      height: 2px
+      background: #23282a
+      top: 40%
+      left: 0
+      transform: rotate(45deg)
+      border-radius: 10px
+    &::after
+      transform: rotate(-45deg)
+  &__content
+    width: 100%
+    max-width: 54.4rem
+    z-index: 2
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 5px 10px -4px rgba(15, 100, 131, 0.37)
+    border-radius: 5px
+    border: 2px solid #f5f7fb
+    background-color: #fff
+    padding: 3.3rem 40px
+    position: relative
+    color: #23282a
+    &-title
+      margin-bottom: 32px
+      h1
+        margin: 0
+    &-btn
+      text-align: center
+      padding-top: 24px
+      button
+        height: 4.8rem
+        padding: 1.1rem 5.7rem
+  &__delete
+    width: 100%
+    max-width: 54.4rem
+    z-index: 2
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 5px 10px -4px rgba(15, 100, 131, 0.37)
+    border-radius: 5px
+    border: 2px solid #f5f7fb
+    background-color: #fff
+    padding: 3.3rem 40px
+    position: relative
+    color: #23282a
+    text-align: center
+    h1
+      margin: 0
+      font-size: 2.4rem
+      font-weight: 500
+      margin-bottom: 2.4rem
+    &-btn
+      display: flex
+      justify-content: space-between
+      max-width: 60%
+      margin: auto
+      
+      .delete-btn
+        width: 10.2rem
+        text-align: center
+        color: white
+        padding: 1.6rem 0
+        margin: 0
+        cursor: pointer
+        display: block
+        z-index: 2
+        border-radius: 35px
+        font-size: 14px
+
+      .btn-yes
+        background: #fd3c60
+      .btn-no
+        color: $color-darker-blue
+  
+  .site-input
+    margin-bottom: 10px
+    position: relative
+    label
+      color: #a1b0b6
+      font-size: 12px
+      font-weight: 400
+      padding-left: 1.3rem
+      position: absolute
+      left: 0
+      top: 5px
+      transform: translateY(-50%)
+      transition: 0.3s ease
+    input
+      width: 100%
+      padding: 1.3rem 3.3rem 0.5rem 1.3rem
+      border: none
+      border-bottom: 2px solid #f5f7fb
+      color: $color-text-black
+      font-size: 18px
+      font-weight: 400
+      background: transparent
+  .input-item
+    position: relative
+    img, svg
+      position: absolute
+      right: 1.3rem
+      top: 50%
+      display: block
+      transform: translateY(-50%)
+  .input-item-pass
+    img, svg
+      cursor: pointer
+  .focus
+    input
+      border-color: #018edc
+
+.popup-layout
+  position: fixed
+  top: -20%
+  left: 0
+  right: 0
+  bottom: 0
+  background-color: rgba(35, 40, 42, .7)
+  z-index: 2500
+
+  .popup
+    position: absolute
+    top: 55%
+    left: 50%
+    transform: translate(-50%, -50%)
+    background-color: #fff
+    border: .2rem solid #dee5f4
+    border-radius: .5rem
+
+.dark .s_popup
+  &__content
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 5px 10px -4px rgba(15, 100, 131, 0.37)
+    border: 2px solid $color-dark-theme-darker-blue
+    background-color: $color-dark-theme-blue
+    color: $color-white
+  &_close
+    &:before,
+    &:after
+      background: $color-white
+  input
+    color: $color-white
+  &__delete
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 5px 10px -4px rgba(15, 100, 131, 0.37)
+    border: 2px solid $color-dark-theme-darker-blue
+    background-color: $color-dark-theme-blue
+    color: $color-white
+    .btn-no
+      color: $color-white
+
+
++r($small)
+  .s_popup
+    &_wrap
+      padding: 16px
+    &_close
+      height: 24px
+      width: 24px
+      top: 2.7rem
+      right: 2.7rem
+    &__delete
+      &-btn
+        max-width: unset
+

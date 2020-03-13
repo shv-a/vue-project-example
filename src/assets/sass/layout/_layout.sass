@@ -1,0 +1,21 @@
+html
+  font-size: 12px
+  +r($xlarge)
+    font-size: 11px
+  +r($large)
+    font-size: 10px
+  +r($medium)
+    font-size: 8px
+
+.layout
+  width: 100%
+  min-width: $min-width
+  position: relative
+
+  &__content
+    margin: 0 auto
+    position: relative
+
++r($small)
+  .layout
+    min-width: unset

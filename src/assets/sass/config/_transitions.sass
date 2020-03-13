@@ -1,0 +1,31 @@
+.fade-in-up
+  &-enter-active
+    transition: margin-top .3s ease-out, opacity .3s ease-in
+    opacity: 1
+  &-leave-active
+    transition: margin-top .2s ease-out, opacity .2s ease-out
+    opacity: 1
+  &-enter, &-leave-to
+    margin-top: 10%
+    opacity: 0
+
+.fade-in-up2
+  &-enter-active
+    transition: margin-top .3s ease-out, opacity .3s ease-in
+    opacity: 1
+  &-leave-active
+    transition: margin-top 0s ease-out, opacity 0s ease-out
+    opacity: 0
+  &-enter, &-leave-to
+    margin-top: 10%
+    opacity: 0
+
+.fade-in
+  &-enter-active
+    transition:  .4s ease-in-out
+    opacity: 1
+  &-leave-active
+    transition:  .4s ease-in-out
+    opacity: 0
+  &-enter, &-leave-to
+    opacity: 0

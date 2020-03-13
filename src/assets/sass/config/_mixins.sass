@@ -1,0 +1,20 @@
+=r($screen)
+  @media all and (max-width: $screen+'px')
+    @content
+
+=mr($screen)
+  @media all and (min-width: $screen+'px')
+    @content
+
+=b($screen)
+  @media all and (max-height: $screen+'px')
+    @content
+
+@function vw($target)
+  $vw-context: (1920*.01) * 1px
+  @return ($target/$vw-context) * 1vw
+
+@mixin text-overflow
+  white-space: nowrap
+  overflow: hidden
+  text-overflow: ellipsis

@@ -1,0 +1,31 @@
+/* font Alice */
+$path-alice-regular: $path-base + 'fonts/alice/alice-regular'
+$f-alice-regular: 'Alice-Regular'
+@font-face
+	font-family: $f-alice-regular
+	src: url($path-alice-regular + '.eot')
+	src: url($path-alice-regular + '.eot?#iefix') format("embedded-opentype"), url($path-alice-regular + '.woff') format("woff"), url($path-alice-regular + '.ttf') format("truetype"), url($path-alice-regular + '.svg#Alice-Regular') format("svg")
+	font-weight: normal
+	font-style: normal
+
+@mixin f-alice-regular()
+	font-family: $f-alice-regular, sans-serif
+
+/* font OpenSans */
+$path-opensans-regular: $path-base + 'fonts/open-sans/opensans-regular'
+$f-opensans-regular: 'OpenSans-Regular'
+@font-face
+	font-family: $f-opensans-regular
+	src: url($path-opensans-regular + '.eot')
+	src: url($path-opensans-regular + '.eot?#iefix') format("embedded-opentype"), url($path-opensans-regular + '.woff') format("woff"), url($path-opensans-regular + '.ttf') format("truetype"), url($path-opensans-regular + '.svg#OpenSans-Regular') format("svg")
+	font-weight: normal
+	font-style: normal
+
+$path-opensans-light: $path-base + 'fonts/open-sans/opensans-light'
+$f-opensans-light: 'OpenSans-Light'
+@font-face
+	font-family: $f-opensans-light
+	src: url($path-opensans-light + '.eot')
+	src: url($path-opensans-light + '.eot?#iefix') format("embedded-opentype"),  url($path-opensans-light + '.woff') format("woff"), url($path-opensans-light + '.ttf') format("truetype"), url($path-opensans-light + '.svg#OpenSans-Light') format("svg")
+	font-weight: normal
+	font-style: normal
